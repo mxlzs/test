@@ -29,5 +29,8 @@ Route::prefix('/contact')->group(function(){
 	Route::any('create', 'admin\Contact@create'); //联系人执行添加
 	Route::any('list', 'admin\Contact@list'); //联系人列表展示
 	Route::any('delete/{contact_id}', 'admin\Contact@delete'); //联系人删除
-	
+});
+
+Route::prefix('/wx')->group(function(){
+    Route::any('index','admin\WxController@index');
 });
