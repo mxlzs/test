@@ -8,6 +8,7 @@
     <label for="firstname" class="col-sm-2 control-label">销售员:</label>
     <div class="col-sm-10">
       <input type="text" class="form-control" name="admin_name" id="firstname" placeholder="请输入销售员">
+      @if($errors->has('admin_name'))<span style="color:red;">{{$errors->first('admin_name')}}</span>@endif
     </div>
   </div>
   <div class="form-group">
@@ -21,30 +22,35 @@
     <label for="lastname" class="col-sm-2 control-label">客户名称:</label>
     <div class="col-sm-10">
       <input type="text" class="form-control" name="client_name" id="lastname" placeholder="请输入客户名称">
+      @if($errors->has('client_name'))<span style="color:red;">{{$errors->first('client_name')}}</span>@endif
     </div>
   </div>
   <div class="form-group">
     <label for="lastname" class="col-sm-2 control-label">客户简称:</label>
     <div class="col-sm-10">
       <input type="text" class="form-control" name="client_short" id="lastname" placeholder="请输入客户简称">
+      @if($errors->has('client_short'))<span style="color:red;">{{$errors->first('client_short')}}</span>@endif
     </div>
   </div>
   <div class="form-group">
     <label for="lastname" class="col-sm-2 control-label">客户编号:</label>
     <div class="col-sm-10">
       <input type="text" class="form-control" name="client_coding" id="lastname" placeholder="请输入客户编号">
+      @if($errors->has('client_coding'))<span style="color:red;">{{$errors->first('client_coding')}}</span>@endif
     </div>
   </div>
   <div class="form-group">
     <label for="lastname" class="col-sm-2 control-label">客户电话:</label>
     <div class="col-sm-10">
       <input type="text" class="form-control" name="tel" id="lastname" placeholder="请输入客户电话">
+      @if($errors->has('tel'))<span style="color:red;">{{$errors->first('tel')}}</span>@endif
     </div>
   </div>
   <div class="form-group">
     <label for="lastname" class="col-sm-2 control-label">客户邮箱:</label>
     <div class="col-sm-10">
       <input type="text" class="form-control" name="email" id="lastname" placeholder="请输入客户邮箱">
+      @if($errors->has('email'))<span style="color:red;">{{$errors->first('email')}}</span>@endif
     </div>
   </div>
   <div class="form-group">
@@ -61,6 +67,7 @@
     <label for="lastname" class="col-sm-2 control-label">详情地址:</label>
     <div class="col-sm-10">
       <textarea name="address" cols="100" rows="5"></textarea>
+      @if($errors->has('address'))<span style="color:red;">{{$errors->first('address')}}</span>@endif
     </div>
   </div>
   <div class="form-group">

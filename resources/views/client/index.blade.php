@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="{{ URL::asset('/bootstrap.min.css') }}">
 </head>
 <body>
+    <form>
+        <input type="text"  name="client_coding" value="{{$query['client_coding']??''}}" placeholder="请输入客户编号" > <button class="btn btn-success">搜索</button>
+    </form>
     <table border="1">
         <tr>
             <td>id</td>
@@ -48,6 +51,6 @@
         </tr>
         @endforeach
     </table>
-    {{$client_info->links()}}
+    {{$client_info->appends($query)->links()}}
 </body>
 </html>
